@@ -50,6 +50,27 @@ void drawGrid()
     }
 }
 
+void random(int &x, int &y)
+{
+    int _maxX = gridX-2;
+    int _maxY = gridY-2;
+    int _min = 1;
+    srand(time(NULL));
+    x = _min + rand() % (_maxX - _min);
+    y = _min + rand() % (_maxY - _min);
+}
+
+void drawFood()
+{
+    if(food)
+        random(foodX, foodY);
+    food = false;
+    glColor3f(1.0,0.0,0.0);
+    glRectf(foodX, foodY,foodX+1, foodY+1);
+
+}
+
+
 void drawSnake()
 {
     for(int i = snake_length-1; i > 0; i--){
@@ -72,39 +93,21 @@ void drawSnake()
         glRectd(posX[i],posY[i],posX[i]+1,posY[i]+1);
     }
 
-    if(posX[0] == 0 || posX[0] == gridX-1 || posY[0] == 0 || posY[0] == gridY-1)
+    if(posX[0] == 0 || posX[0] == gridX-1 || posY[0] == 0 || posY[0] == gridY-1) // check if head touch red blocks
         gameOver = true;
-    if(posX[0] == foodX && posY[0] == foodY){
+    if(posX[0] == foodX && posY[0] == foodY){ // check if head touch coins
         score++;
         snake_length++;
         if(snake_length > MAX)
             snake_length = MAX;
         food = true;
     }
-    for(int j=1;j<snake_length;j++)
+    for(int j=1;j<snake_length;j++) // loop on every block in tail
 {
-        if(posX[j]==posX[0] && posY[j]==posY[0])
+        if(posX[j]==posX[0] && posY[j]==posY[0]) // check if head touch tail
             gameOver=true;
+        if(posX[j]==foodX && posY[j]==foodY) // check if head touch tail
+            food=true;
 }
-}
-
-void random(int &x, int &y)
-{
-    int _maxX = gridX-2;
-    int _maxY = gridY-2;
-    int _min = 1;
-    srand(time(NULL));
-    x = _min + rand() % (_maxX - _min);
-    y = _min + rand() % (_maxY - _min);
-}
-
-void drawFood()
-{
-    if(food)
-        random(foodX, foodY);
-    food = false;
-    glColor3f(1.0,0.0,0.0);
-    glRectf(foodX, foodY,foodX+1, foodY+1);
-
 }
 

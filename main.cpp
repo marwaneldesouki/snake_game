@@ -4,8 +4,8 @@
 #include<windows.h>
 #include "game.h"
 
-#define COLUMNS 40
-#define ROWS 40
+#define COLUMNS 40 //number of columns
+#define ROWS 40 //number of rows
 #define FPS 10
 
 extern short sDirection;
@@ -26,9 +26,9 @@ void display(){
     glutSwapBuffers();
     if(gameOver){
         char _score[10];
-        itoa(score,_score,10);
+        itoa(score,_score,10); //convert score from int to char>string
         char text[50] = "Your Score: ";
-        strcat(text,_score);
+        strcat(text,_score); //concatenate text to score
         MessageBox(NULL, text,"GAME OVER" ,0);
         exit(0);
     }
