@@ -246,12 +246,150 @@
 	<windows.h>
 	"game.h"
 
-1639012451 source:g:\gam3a\computer graphics\sec\snake_game\main.cpp
+1639264595 source:g:\gam3a\computer graphics\sec\snake_game\main.cpp
 	<GL/gl.h>
 	<GL/glut.h>
 	<stdlib.h>
 	<windows.h>
+	<MMsystem.h>
+	<irrKlang.h>
 	"game.h"
 
 1639006126 g:\gam3a\computer graphics\sec\snake_game\game.h
+
+1639266070 source:g:\gam3a\computer graphics\sec\snake_game\game.cpp
+	<GL/gl.h>
+	<GL/glut.h>
+	<cstdlib>
+	<ctime>
+	"game.h"
+	<windows.h>
+	<MMsystem.h>
+
+1398487410 c:\program files (x86)\codeblocks\mingw\include\irrklang.h
+	"ik_irrKlangTypes.h"
+	"ik_vec3d.h"
+	"ik_IRefCounted.h"
+	"ik_IVirtualRefCounted.h"
+	"ik_ESoundOutputDrivers.h"
+	"ik_ESoundEngineOptions.h"
+	"ik_EStreamModes.h"
+	"ik_SAudioStreamFormat.h"
+	"ik_ISoundEngine.h"
+	"ik_ISoundSource.h"
+	"ik_ISound.h"
+	"ik_IAudioStream.h"
+	"ik_IAudioStreamLoader.h"
+	"ik_ISoundEffectControl.h"
+	"ik_ISoundStopEventReceiver.h"
+	"ik_IFileFactory.h"
+	"ik_IFileReader.h"
+	"ik_ISoundDeviceList.h"
+	"ik_IAudioRecorder.h"
+	"ik_ISoundMixedOutputReceiver.h"
+
+1394091854 c:\program files (x86)\codeblocks\mingw\include\ik_irrklangtypes.h
+	<wchar.h>
+
+1341006778 c:\program files (x86)\codeblocks\mingw\include\wchar.h
+	<_mingw.h>
+	<stddef.h>
+	<stdarg.h>
+	<wctype.h>
+	<sys/types.h>
+	<stdio.h>
+	<stdint.h>
+	<stdint.h>
+
+1341006778 c:\program files (x86)\codeblocks\mingw\include\wctype.h
+	<_mingw.h>
+	<stddef.h>
+
+1341006780 c:\program files (x86)\codeblocks\mingw\include\sys\types.h
+	<_mingw.h>
+	<stddef.h>
+
+1341006776 c:\program files (x86)\codeblocks\mingw\include\stdio.h
+	<_mingw.h>
+	<stddef.h>
+	<stdarg.h>
+	<sys/types.h>
+
+1341006776 c:\program files (x86)\codeblocks\mingw\include\stdint.h
+	<stddef.h>
+
+1399012338 c:\program files (x86)\codeblocks\mingw\include\ik_vec3d.h
+	<math.h>
+	"ik_irrKlangTypes.h"
+
+1341006774 c:\program files (x86)\codeblocks\mingw\include\math.h
+	<_mingw.h>
+
+1394081694 c:\program files (x86)\codeblocks\mingw\include\ik_irefcounted.h
+	"ik_irrKlangTypes.h"
+
+1394081694 c:\program files (x86)\codeblocks\mingw\include\ik_ivirtualrefcounted.h
+	"ik_irrKlangTypes.h"
+
+1394081700 c:\program files (x86)\codeblocks\mingw\include\ik_esoundoutputdrivers.h
+
+1394081694 c:\program files (x86)\codeblocks\mingw\include\ik_esoundengineoptions.h
+
+1394081694 c:\program files (x86)\codeblocks\mingw\include\ik_estreammodes.h
+
+1394081694 c:\program files (x86)\codeblocks\mingw\include\ik_saudiostreamformat.h
+	"ik_IRefCounted.h"
+
+1394089264 c:\program files (x86)\codeblocks\mingw\include\ik_isoundengine.h
+	"ik_IRefCounted.h"
+	"ik_vec3d.h"
+	"ik_ISoundSource.h"
+	"ik_ISound.h"
+	"ik_EStreamModes.h"
+	"ik_IFileFactory.h"
+	"ik_ISoundMixedOutputReceiver.h"
+
+1394081694 c:\program files (x86)\codeblocks\mingw\include\ik_isoundsource.h
+	"ik_IVirtualRefCounted.h"
+	"ik_vec3d.h"
+	"ik_EStreamModes.h"
+	"ik_SAudioStreamFormat.h"
+
+1394081694 c:\program files (x86)\codeblocks\mingw\include\ik_isound.h
+	"ik_IVirtualRefCounted.h"
+	"ik_ISoundEffectControl.h"
+	"ik_vec3d.h"
+
+1394081694 c:\program files (x86)\codeblocks\mingw\include\ik_isoundeffectcontrol.h
+	"ik_IVirtualRefCounted.h"
+	"ik_vec3d.h"
+
+1394089252 c:\program files (x86)\codeblocks\mingw\include\ik_ifilefactory.h
+	"ik_IRefCounted.h"
+
+1394081694 c:\program files (x86)\codeblocks\mingw\include\ik_isoundmixedoutputreceiver.h
+	"ik_IRefCounted.h"
+	"ik_SAudioStreamFormat.h"
+
+1394081694 c:\program files (x86)\codeblocks\mingw\include\ik_iaudiostream.h
+	"ik_IRefCounted.h"
+	"ik_SAudioStreamFormat.h"
+
+1394081694 c:\program files (x86)\codeblocks\mingw\include\ik_iaudiostreamloader.h
+	"ik_IRefCounted.h"
+	"ik_IFileReader.h"
+
+1394081694 c:\program files (x86)\codeblocks\mingw\include\ik_ifilereader.h
+	"ik_IRefCounted.h"
+
+1394081694 c:\program files (x86)\codeblocks\mingw\include\ik_isoundstopeventreceiver.h
+	"ik_IRefCounted.h"
+	"ik_SAudioStreamFormat.h"
+
+1394081694 c:\program files (x86)\codeblocks\mingw\include\ik_isounddevicelist.h
+	"ik_IRefCounted.h"
+
+1394089248 c:\program files (x86)\codeblocks\mingw\include\ik_iaudiorecorder.h
+	"ik_IRefCounted.h"
+	"ik_ISoundSource.h"
 

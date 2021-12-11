@@ -3,6 +3,8 @@
 #include <cstdlib>
 #include<ctime>
 #include "game.h"
+#include<windows.h>
+#include<MMsystem.h>
 
 int gridX, gridY;
 int snake_length = 5;
@@ -98,14 +100,19 @@ void drawSnake()
     if(posX[0] == foodX && posY[0] == foodY){ // check if head touch coins
         score++;
         snake_length++;
+         PlaySound(TEXT("G:\\gam3a\\Computer Graphics\\sec\\Snake_game\\coin_sound.wav"),NULL,SND_ASYNC);
         if(snake_length > MAX)
             snake_length = MAX;
         food = true;
     }
     for(int j=1;j<snake_length;j++) // loop on every block in tail
 {
-        if(posX[j]==posX[0] && posY[j]==posY[0]) // check if head touch tail
-            gameOver=true;
+        if(posX[j]==posX[0] && posY[j]==posY[0]){// check if head touch tail
+              PlaySound(TEXT("G:\\gam3a\\Computer Graphics\\sec\\Snake_game\\lose_sound.wav"),NULL,SND_ASYNC);
+              gameOver=true;
+        }
+
+
         if(posX[j]==foodX && posY[j]==foodY) // check if head touch tail
             food=true;
 }

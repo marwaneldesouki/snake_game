@@ -2,6 +2,8 @@
 #include <GL/glut.h>
 #include <stdlib.h>
 #include<windows.h>
+#include<MMsystem.h>
+#include <irrKlang.h>
 #include "game.h"
 
 #define COLUMNS 40 //number of columns
@@ -84,6 +86,7 @@ int main(int argc,char **argv){
     glutReshapeFunc(reshape); //reshape window to max,min
     glutTimerFunc(0,timer,0);
     glutSpecialFunc(keyboard);
+
     init();
     glutMainLoop();
     return 0;
