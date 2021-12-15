@@ -5,6 +5,9 @@
 #include "game.h"
 #include<windows.h>
 #include<MMsystem.h>
+#include <algorithm>
+
+
 
 int gridX, gridY;
 int snake_length = 5;
@@ -13,8 +16,8 @@ int foodX, foodY;
 short sDirection = RIGHT;
 extern bool gameOver;
 extern int score;
-int posX[60] = {5,5,5,5,5}, posY [60] = {5,4,3,2,1};
-
+int posX[60] = {5,5,5,5,5};
+int posY [60] = {5,4,3,2,1};
 void initGrid(int x, int y)
 {
     gridX = x;
@@ -95,8 +98,10 @@ void drawSnake()
         glRectd(posX[i],posY[i],posX[i]+1,posY[i]+1);
     }
 
-    if(posX[0] == 0 || posX[0] == gridX-1 || posY[0] == 0 || posY[0] == gridY-1) // check if head touch red blocks
+    if(posX[0] == 0 || posX[0] == gridX-1 || posY[0] == 0 || posY[0] == gridY-1){ // check if head touch red blocks
         gameOver = true;
+         PlaySound(TEXT("G:\\gam3a\\Computer Graphics\\sec\\Snake_game\\lose_sound.wav"),NULL,SND_ASYNC);
+    }
     if(posX[0] == foodX && posY[0] == foodY){ // check if head touch coins
         score++;
         snake_length++;

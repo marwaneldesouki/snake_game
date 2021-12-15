@@ -246,18 +246,17 @@
 	<windows.h>
 	"game.h"
 
-1639264595 source:g:\gam3a\computer graphics\sec\snake_game\main.cpp
+1639527816 source:g:\gam3a\computer graphics\sec\snake_game\main.cpp
 	<GL/gl.h>
 	<GL/glut.h>
 	<stdlib.h>
 	<windows.h>
 	<MMsystem.h>
-	<irrKlang.h>
 	"game.h"
 
-1639006126 g:\gam3a\computer graphics\sec\snake_game\game.h
+1639531069 g:\gam3a\computer graphics\sec\snake_game\game.h
 
-1639266070 source:g:\gam3a\computer graphics\sec\snake_game\game.cpp
+1639531572 source:g:\gam3a\computer graphics\sec\snake_game\game.cpp
 	<GL/gl.h>
 	<GL/glut.h>
 	<cstdlib>
@@ -265,6 +264,7 @@
 	"game.h"
 	<windows.h>
 	<MMsystem.h>
+	<algorithm>
 
 1398487410 c:\program files (x86)\codeblocks\mingw\include\irrklang.h
 	"ik_irrKlangTypes.h"
@@ -392,4 +392,22 @@
 1394089248 c:\program files (x86)\codeblocks\mingw\include\ik_iaudiorecorder.h
 	"ik_IRefCounted.h"
 	"ik_ISoundSource.h"
+
+1639531572 source:g:\gam3a\computer graphics\sec\snake_game\pages.cpp
+	<GL/gl.h>
+	<GL/glut.h>
+	<cstdlib>
+	<ctime>
+	"game.h"
+	<windows.h>
+	<MMsystem.h>
+	<iostream>
+
+1639523427 g:\gam3a\computer graphics\sec\snake_game\game.cpp
+	<GL/gl.h>
+	<GL/glut.h>
+	<cstdlib>
+	<ctime>
+	<windows.h>
+	<MMsystem.h>
 
