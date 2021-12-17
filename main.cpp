@@ -14,7 +14,7 @@ int score = 0;
 
 void init(){
     glClearColor(0.0,0.0,0.0,1.0); //background_color
-    initGrid(COLUMNS,ROWS);
+    initGrid(40,40);
 
 }
 
@@ -67,7 +67,7 @@ int main(int argc,char **argv){
     glutReshapeFunc(reshape); //reshape window to max,min
     glutTimerFunc(0,timer,0);
     glutSpecialFunc(keyboard);
-glutMouseFunc(mouse_event);
+    glutMouseFunc(mouse_event);
     init();
     glutMainLoop();
     return 0;

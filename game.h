@@ -11,7 +11,7 @@
 #define FPS 10
 #define MAX 60
 
-
+void reset();
 void initGrid(int x, int y);
 void drawGrid();
 void drawSnake();
