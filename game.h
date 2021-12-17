@@ -12,6 +12,7 @@
 #define MAX 60
 
 void reset();
+void pause();
 void initGrid(int x, int y);
 void drawGrid();
 void drawSnake();
@@ -19,10 +20,11 @@ void drawFood();
 void random(int&,int&);
 void welcome();
 void instruction();
-void about();
+void settings();
 void display();
 void game_page();
 void timer(int);
 void mouse_event(int,int,int,int);
+void keyboard(unsigned char,int,int);
 
 #endif
