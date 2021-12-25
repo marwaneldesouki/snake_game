@@ -1,29 +1,27 @@
 #include <GL/gl.h>
-#include<GL/glut.h>
+#include <GL/glut.h>
 #include <cstdlib>
-#include<ctime>
+#include <ctime>
 #include "game.h"
-#include<windows.h>
-#include<MMsystem.h>
-#include <algorithm>
-#include <iterator>
+#include <windows.h>
+#include <MMsystem.h>
 #include <iostream>
 using std::fill_n;
 using namespace std;
 
 int gridX, gridY;
 int snake_length = 5;
-bool food = true;
 int foodX, foodY;
+int level  = 1;
+int posX[40] = {5,5,5,5,5};
+int posY [40]= {5,4,3,2,1};
 short sDirection = RIGHT;
-extern bool gameOver;
+bool food = true;
+bool win;
 extern int score;
 extern bool pauseflag;
 extern bool mute_sounds;
-bool win;
-int level  = 1;
-int posX[60] = {5,5,5,5,5};
-int posY [60]= {5,4,3,2,1};
+extern bool gameOver;
 
 void initGrid(int x, int y){
     gridX = x;
@@ -31,7 +29,7 @@ void initGrid(int x, int y){
 }
 
 void unit(int x, int y){
-    if(x==0 || y==0 || x==gridX-1 || y==gridY-1){
+    if(x == 0 || y == 0 || x == gridX-1 || y == gridY-1){
         glLineWidth(1.0);
         glColor3f(1.0,0.0,0.0);
     }
@@ -48,20 +46,20 @@ void unit(int x, int y){
 }
 
 void reset(){
-    std::fill_n(posX, 60, 0);
-    std::fill_n(posY, 60, 0);
-    snake_length =5;
+    std::fill_n(posX, 40, 0);
+    std::fill_n(posY, 40, 0);
+    snake_length = 5;
     score = 0;
     sDirection = RIGHT;
-    for(int j=5,i=0; i<5; i++,j--){
+    for(int j = 5,i = 0; i<5; i++,j--){
         posX[i]=5;
         posY[i]=j;
     }
 }
 
 void drawGrid(){
-    for(int x=0; x<gridX; x++){
-        for(int y=0; y<gridY; y++){
+    for(int x = 0; x < gridX; x++){
+        for(int y = 0; y < gridY; y++){
             unit(x,y);
         }
     }
@@ -81,10 +79,9 @@ void drawFood(){
         random(foodX, foodY);
     food = false;
     glColor3f(1.0,0.0,0.0);
-    glRectf(foodX, foodY,foodX+1, foodY+1);
+    glRectf(foodX, foodY, foodX+1, foodY+1);
 
 }
-
 
 void drawSnake(){
    if(!pauseflag){
@@ -114,46 +111,44 @@ void drawSnake(){
             else if(level==4)
                 glColor3f(1.0,1.0,0.0);
             else if(level==5)
-               glColor3f((rand() % 100+1)/10,(rand() % 100+1)/10,(rand() % 100+1)/10);
+               glColor3f((rand() % 100+1)/100,(rand() % 100+1)/100,(rand() % 100+1)/100);
         }
 
         glRectd(posX[i],posY[i],posX[i]+1,posY[i]+1);
     }
-    if(snake_length==10&&level==1){
-        win=true;
-    }
-    else if(snake_length==15&&level==2){
+    if(snake_length == 10 && level == 1){
         win = true;
     }
-    else if(snake_length==20&&level==3){
+    else if(snake_length == 15 && level == 2){
         win = true;
     }
-    else if(snake_length==25&&level==4){
+    else if(snake_length == 20 && level == 3){
         win = true;
     }
-    else if(snake_length==30&&level==5){
+    else if(snake_length == 25 && level == 4){
         win = true;
     }
+    else if(snake_length == 30 && level == 5){
+        win = true;
+    }
+
+    //G:\\gam3a\\Computer Graphics\\sec\\Snake_game\\sounds deso
+    //C:\\Users\\Habiba\\Desktop\\Semester 5\\Computer Graphics\\Snake_game\\sounds habiba
 
     if(posX[0] == 0 || posX[0] == gridX-1 || posY[0] == 0 || posY[0] == gridY-1){  // check if head touch red blocks
         gameOver = true;
         if(!mute_sounds)
         PlaySound(TEXT("G:\\gam3a\\Computer Graphics\\sec\\Snake_game\\sounds\\lose_sound.wav"),NULL,SND_ASYNC);
-
-        //G:\\gam3a\\Computer Graphics\\sec\\Snake_game\\sounds deso
-        //C:\\Users\\Habiba\\Desktop\\Semester 5\\Computer Graphics\\snake_game-main\\sounds habiba
     }
     if(posX[0] == foodX && posY[0] == foodY){  // check if head touch food
         score++;
         snake_length++;
         if(!mute_sounds)
         PlaySound(TEXT("G:\\gam3a\\Computer Graphics\\sec\\Snake_game\\sounds\\coin_sound.wav"),NULL,SND_ASYNC);
-        if(snake_length > MAX)
-            snake_length = MAX;
         food = true;
     }
-    for(int j=1; j<snake_length; j++){ // loop on every block in body
-        if(posX[j]==posX[0] && posY[j]==posY[0]){ // check if head touch body
+    for(int j = 1; j<snake_length; j++){ // loop on every block in body
+        if(posX[j] == posX[0] && posY[j] == posY[0]){ // check if head touch body
                 if(!mute_sounds)
             PlaySound(TEXT("G:\\gam3a\\Computer Graphics\\sec\\Snake_game\\sounds\\lose_sound.wav"),NULL,SND_ASYNC);
             gameOver=true;

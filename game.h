@@ -9,7 +9,6 @@
 #define COLUMNS 40 //number of columns
 #define ROWS 40 //number of rows
 #define FPS 10
-#define MAX 60
 
 void reset();
 void pause();

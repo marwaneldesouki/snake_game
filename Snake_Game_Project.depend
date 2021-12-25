@@ -246,17 +246,18 @@
 	<windows.h>
 	"game.h"
 
-1639781192 source:g:\gam3a\computer graphics\sec\snake_game\main.cpp
+1640387814 source:g:\gam3a\computer graphics\sec\snake_game\main.cpp
 	<GL/gl.h>
 	<GL/glut.h>
 	<stdlib.h>
 	<windows.h>
 	<MMsystem.h>
 	"game.h"
+	<iostream>
 
-1639773291 g:\gam3a\computer graphics\sec\snake_game\game.h
+1640384671 g:\gam3a\computer graphics\sec\snake_game\game.h
 
-1639781890 source:g:\gam3a\computer graphics\sec\snake_game\game.cpp
+1640387907 source:g:\gam3a\computer graphics\sec\snake_game\game.cpp
 	<GL/gl.h>
 	<GL/glut.h>
 	<cstdlib>
@@ -264,8 +265,6 @@
 	"game.h"
 	<windows.h>
 	<MMsystem.h>
-	<algorithm>
-	<iterator>
 	<iostream>
 
 1398487410 c:\program files (x86)\codeblocks\mingw\include\irrklang.h
@@ -395,7 +394,7 @@
 	"ik_IRefCounted.h"
 	"ik_ISoundSource.h"
 
-1639781479 source:g:\gam3a\computer graphics\sec\snake_game\pages.cpp
+1640391495 source:g:\gam3a\computer graphics\sec\snake_game\pages.cpp
 	<GL/gl.h>
 	<GL/glut.h>
 	<cstdlib>
@@ -413,7 +412,7 @@
 	<windows.h>
 	<MMsystem.h>
 
-1639689424 source:c:\users\habiba\desktop\semester 5\computer graphics\snake_game-main\game.cpp
+1639831948 source:c:\users\habiba\desktop\semester 5\computer graphics\snake_game-main\game.cpp
 	<GL/gl.h>
 	<GL/glut.h>
 	<cstdlib>
@@ -421,11 +420,11 @@
 	"game.h"
 	<windows.h>
 	<MMsystem.h>
-	<algorithm>
+	<iostream>
 
-1639532391 c:\users\habiba\desktop\semester 5\computer graphics\snake_game-main\game.h
+1639782111 c:\users\habiba\desktop\semester 5\computer graphics\snake_game-main\game.h
 
-1639750267 source:c:\users\habiba\desktop\semester 5\computer graphics\snake_game-main\main.cpp
+1639783984 source:c:\users\habiba\desktop\semester 5\computer graphics\snake_game-main\main.cpp
 	<GL/gl.h>
 	<GL/glut.h>
 	<stdlib.h>
@@ -433,7 +432,7 @@
 	<MMsystem.h>
 	"game.h"
 
-1639581268 source:c:\users\habiba\desktop\semester 5\computer graphics\snake_game-main\pages.cpp
+1639827325 source:c:\users\habiba\desktop\semester 5\computer graphics\snake_game-main\pages.cpp
 	<GL/gl.h>
 	<GL/glut.h>
 	<cstdlib>
@@ -473,21 +472,7 @@
 	<MMsystem.h>
 	<iostream>
 
-1639768055 source:c:\users\habiba\desktop\semester 5\computer graphics\snake_game\game.cpp
-	<GL/gl.h>
-	<GL/glut.h>
-	<cstdlib>
-	<ctime>
-	"game.h"
-	<windows.h>
-	<MMsystem.h>
-	<algorithm>
-	<iterator>
-	<iostream>
-
-1639765217 c:\users\habiba\desktop\semester 5\computer graphics\snake_game\game.h
-
-1639766764 source:c:\users\habiba\desktop\semester 5\computer graphics\snake_game\pages.cpp
+1640387907 source:c:\users\habiba\desktop\semester 5\computer graphics\snake_game\game.cpp
 	<GL/gl.h>
 	<GL/glut.h>
 	<cstdlib>
@@ -497,11 +482,24 @@
 	<MMsystem.h>
 	<iostream>
 
-1639765143 source:c:\users\habiba\desktop\semester 5\computer graphics\snake_game\main.cpp
+1640384671 c:\users\habiba\desktop\semester 5\computer graphics\snake_game\game.h
+
+1640389072 source:c:\users\habiba\desktop\semester 5\computer graphics\snake_game\pages.cpp
+	<GL/gl.h>
+	<GL/glut.h>
+	<cstdlib>
+	<ctime>
+	"game.h"
+	<windows.h>
+	<MMsystem.h>
+	<iostream>
+
+1640387814 source:c:\users\habiba\desktop\semester 5\computer graphics\snake_game\main.cpp
 	<GL/gl.h>
 	<GL/glut.h>
 	<stdlib.h>
 	<windows.h>
 	<MMsystem.h>
 	"game.h"
+	<iostream>
 
